@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-  char cstring[100] = "Welcome";
+  char cstring[8] = "Welcome";
 
   cout << cstring << endl;
 

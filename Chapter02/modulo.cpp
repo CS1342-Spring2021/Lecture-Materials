@@ -3,15 +3,15 @@
 using namespace std;
 
 int main() {
-  // Integer division and modulo 
-  int x = 5;
+  // Integer division and modulo
+  int x = 17;
   int y = 5;
 
-  int result = x % y;
+  int result = x / y;
+  int remainder = x % y;
 
-  // if (x % 2 == 0)
+  if (x % 2 == 0) cout << "Result: " << result << endl;
+  cout << "Remainder: " << remainder << endl;
 
-  cout << "Result: " << result << endl;
-  
   return 0;
 }
