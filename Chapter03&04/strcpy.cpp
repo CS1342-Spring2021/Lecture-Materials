@@ -3,9 +3,8 @@
 using namespace std;
 
 int main() {
-  char cstring[100] = "Welcome";
-
-  cout << cstring << endl;
+  const char originalStr[15]{"String to copy"};
+  char newStr[20]{};
 
   return 0;
 }
