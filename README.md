@@ -9,6 +9,7 @@ You will find the following under the sample code directory.
 1. `Chapter01/` - Intro to C++, Basic I/O
 2. `Chapter02/` - Variables, Operators and Assignment
 3. `Chapter03&04/` - Control Structures and Loops
+4. `Chapter05/` - Functions
 
 ### Miscellaneous
 
