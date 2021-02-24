@@ -5,10 +5,7 @@ using namespace std;
 // Function to return
 // gcd of a and b
 int gcd(int a, int b) {
-  if (b == 0)
-    return a;
-  else
-    return gcd(b, a % b);
+  // TODO
 }
 
 int main() {
