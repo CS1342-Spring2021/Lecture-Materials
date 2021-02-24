@@ -10,6 +10,7 @@ You will find the following under the sample code directory.
 2. `Chapter02/` - Variables, Operators and Assignment
 3. `Chapter03&04/` - Control Structures and Loops
 4. `Chapter05/` - Functions
+5. `Chapter06/` - Recursion
 
 ### Miscellaneous
 
