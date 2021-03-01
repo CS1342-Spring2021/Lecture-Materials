@@ -2,15 +2,10 @@
 
 using namespace std;
 
-int fib(int num) {
-  if (num <= 1)
-    return num;
-  else
-    return fib(num - 1) + fib(num - 2);
-}
+int fib(int num) { return fib(num); }
 
 int main() {
-  cout << fib(55) << endl;
+  cout << fib(100) << endl;
 
   return 0;
 }
