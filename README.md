@@ -11,6 +11,7 @@ You will find the following under the sample code directory.
 3. `Chapter03&04/` - Control Structures and Loops
 4. `Chapter05/` - Functions
 5. `Chapter06/` - Recursion
+6. `Chapter07/` - File I/O
 
 ### Miscellaneous
 
