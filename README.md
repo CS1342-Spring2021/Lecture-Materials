@@ -12,6 +12,7 @@ You will find the following under the sample code directory.
 4. `Chapter05/` - Functions
 5. `Chapter06/` - Recursion
 6. `Chapter07/` - File I/O
+7. `Chapter08/` - STL Arrays and Vectors
 
 ### Miscellaneous
 
