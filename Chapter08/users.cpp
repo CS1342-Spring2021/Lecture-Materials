@@ -5,7 +5,21 @@
 
 using namespace std;
 
+int findFirstName(const vector<string>& names, string query) {
+  for (int i = 0; i < names.size(); i++) {
+    if (names.at(i) == query) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
 int main() {
+  vector<string> firstNames;
+  vector<string> lastNames;
+  vector<string> ages;
+
   ifstream inFS;
   int fileNum;
 
@@ -28,9 +42,13 @@ int main() {
     getline(lineSS, age);
 
     // Use firstName, lastName, age...
+    firstNames.push_back(firstName);
+    lastNames.push_back(lastName);
+    ages.push_back(age);
   }
 
-  // 3 vectors
+  int index = findFirstName(firstNames, "Harry");
+  cout << "Harry Potter's age is " << ages.at(index);
 
   cout << "Closing file users.txt." << endl;
 
