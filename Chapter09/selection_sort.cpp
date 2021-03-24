@@ -1,44 +1,41 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
-void SelectionSort(int numbers[], int numbersSize) {
-  int i;
-  int j;
+void SelectionSort(vector<int> &numbers) {
   int indexSmallest;
-  int temp;  // Temporary variable for swap
 
-  for (i = 0; i < numbersSize - 1; ++i) {
+  for (int i = 0; i < numbers.size() - 1; ++i) {
     // Find index of smallest remaining element
     indexSmallest = i;
-    for (j = i + 1; j < numbersSize; ++j) {
-      if (numbers[j] < numbers[indexSmallest]) {
+    for (int j = i + 1; j < numbers.size(); ++j) {
+      if (numbers.at(j) < numbers.at(indexSmallest)) {
         indexSmallest = j;
       }
     }
 
     // Swap numbers[i] and numbers[indexSmallest]
-    temp = numbers[i];
-    numbers[i] = numbers[indexSmallest];
-    numbers[indexSmallest] = temp;
+    int temp = numbers.at(i);
+    numbers.at(i) = numbers.at(indexSmallest);
+    numbers.at(indexSmallest) = temp;
   }
 }
 
 int main() {
-  int numbers[] = {10, 2, 78, 4, 45, 32, 7, 11};
-  const int NUMBERS_SIZE = 8;
-  int i;
+  vector<int> numbers = {10, 2, 78, 4, 45, 32, 7, 11};
 
   cout << "UNSORTED: ";
-  for (i = 0; i < NUMBERS_SIZE; ++i) {
-    cout << numbers[i] << ' ';
+  for (int i = 0; i < numbers.size(); ++i) {
+    cout << numbers.at(i) << ' ';
   }
   cout << endl;
 
-  SelectionSort(numbers, NUMBERS_SIZE);
+  SelectionSort(numbers);
 
   cout << "SORTED: ";
-  for (i = 0; i < NUMBERS_SIZE; ++i) {
-    cout << numbers[i] << ' ';
+  for (int i = 0; i < numbers.size(); ++i) {
+    cout << numbers.at(i) << ' ';
   }
   cout << endl;
 

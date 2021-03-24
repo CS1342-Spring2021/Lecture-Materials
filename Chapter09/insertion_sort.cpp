@@ -1,41 +1,40 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
-void InsertionSort(int numbers[], int numbersSize) {
-  int i;
+void InsertionSort(vector<int> &numbers) {
   int j;
   int temp;  // Temporary variable for swap
 
-  for (i = 1; i < numbersSize; ++i) {
+  for (int i = 1; i < numbers.size(); ++i) {
     j = i;
     // Insert numbers[i] into sorted part
     // stopping once numbers[i] in correct position
-    while (j > 0 && numbers[j] < numbers[j - 1]) {
+    while (j > 0 && numbers.at(j) < numbers.at(j - 1)) {
       // Swap numbers[j] and numbers[j - 1]
-      temp = numbers[j];
-      numbers[j] = numbers[j - 1];
-      numbers[j - 1] = temp;
+      temp = numbers.at(j);
+      numbers.at(j) = numbers.at(j - 1);
+      numbers.at(j - 1) = temp;
       --j;
     }
   }
 }
 
 int main() {
-  int numbers[] = {10, 2, 78, 4, 45, 32, 7, 11};
-  const int NUMBERS_SIZE = 8;
-  int i;
+  vector<int> numbers = {10, 2, 78, 4, 45, 32, 7, 11};
 
   cout << "UNSORTED: ";
-  for (i = 0; i < NUMBERS_SIZE; ++i) {
-    cout << numbers[i] << " ";
+  for (int i = 0; i < numbers.size(); ++i) {
+    cout << numbers.at(i) << " ";
   }
   cout << endl;
 
-  InsertionSort(numbers, NUMBERS_SIZE);
+  InsertionSort(numbers);
 
   cout << "SORTED: ";
-  for (i = 0; i < NUMBERS_SIZE; ++i) {
-    cout << numbers[i] << " ";
+  for (int i = 0; i < numbers.size(); ++i) {
+    cout << numbers.at(i) << " ";
   }
   cout << endl;
 
