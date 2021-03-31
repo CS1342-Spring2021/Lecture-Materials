@@ -24,6 +24,9 @@ class Profile {
   // Other methods
   void display();
 
+  // Overloaded Operators
+  bool operator==(Profile profileToCompare);
+
  private:
   int id;
   string firstName;
@@ -39,7 +42,10 @@ Profile::Profile(int newId, string newFirstName, string newLastName)
   cout << "Overloaded Constructor called" << endl;
 }
 
-void Profile::setFirstName(string firstName) { this->firstName = firstName; }
+void Profile::setFirstName(string firstName) {
+  cout << this;
+  this->firstName = firstName;
+}
 void Profile::setLastName(string newLastName) { lastName = newLastName; }
 
 string Profile::getFirstName() { return firstName; }
@@ -51,11 +57,21 @@ void Profile::display() {
   cout << lastName << endl;
 }
 
+bool Profile::operator==(Profile profileToCompare) {
+  cout << this->firstName << endl;
+  return this->lastName == profileToCompare.lastName;
+}
+
 int main() {
   Profile profile1(1, "Erik", "Gabrielsen");
+  Profile profile2(2, "Liz", "Gabrielsen");
 
-  profile1.display();
+  // profile1.operator==(profile2)
+  if (profile1 == profile2) {
+    cout << "Equal!" << endl;
+  } else {
+    cout << "Not Equal!" << endl;
+  }
 
-  
   return 0;
 }

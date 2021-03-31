@@ -24,6 +24,9 @@ class Profile {
   // Other Functions
   void display() const;
 
+  // Overloaded Operators
+  bool operator==(Profile p);
+
  private:
   int id;
   string firstName;
@@ -49,6 +52,10 @@ Profile::Profile(int initId, string initFirstName, string initLastName)
   display();
 }
 
+bool Profile::operator==(Profile p) {
+  return this->lastName == p.lastName && this->firstName == p.firstName;
+}
+
 void Profile::display() const {
   cout << id << endl;
   cout << firstName << endl;
@@ -56,15 +63,14 @@ void Profile::display() const {
 }
 
 int main() {
-  int id = 1;
-  string firstName = "Erik";
-  string lastName = "Gabrielsen";
-
-  Profile user1 = Profile(id, firstName, lastName);
-  Profile user2(2, "George", "Jetson");
-
-  cout << endl;
-  user2.display();
+  Profile user1(1, "Elroy", "Jetson");
+  Profile user2(2, "Elroy", "Jetson");
+  // user1.operator==(user2)
+  if (user1 == user2) {
+    cout << "Equal!" << endl;
+  } else {
+    cout << "Not Equal!" << endl;
+  }
 
   return 0;
 }
