@@ -19,10 +19,3 @@ void PrintReverse(char word[], const int& size) {
   cout << word[size - 1] << endl;
   PrintReverse(word, size - 1);
 }
-
-void PrintReverse(char word[], const int& size) {
-  if (size < 1) return;
-
-  cout << word[size - 1] << endl;
-  PrintReverse(word, size - 1);
-}
