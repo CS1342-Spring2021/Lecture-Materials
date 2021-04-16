@@ -4,26 +4,29 @@ using namespace std;
 
 class MyClass {
  public:
-  int *value;
+  int *ptr;
 
   MyClass(const MyClass &copyClass);
   MyClass();
 };
 
-MyClass::MyClass() { value = new int(10); }
+MyClass::MyClass() { ptr = new int(10); }
 
 MyClass::MyClass(const MyClass &copyClass) {
-  value = new int;
-  *value = *(copyClass.value);
+  // ptr = copyClass.ptr;
+
+  ptr = new int;
+  *ptr = *(copyClass.ptr);
 }
 
-void updateClass(MyClass localClass) { *(localClass.value) = 100; }
+void updateClass(MyClass localClass) { *(localClass.ptr) = 100; }
 
 int main() {
-  MyClass *newClass = new MyClass;
+  MyClass obj1;
+  MyClass obj2(obj1);
 
-  cout << "Value 1: " << *(newClass->value) << endl;
-  updateClass(*newClass);
-  cout << "Value 1 again: " << *(newClass->value) << endl;
+  cout << "ptr 1: " << *(obj2.ptr) << endl;
+  updateClass(obj2);
+  cout << "ptr 1 again: " << *(obj2.ptr) << endl;
   return 0;
 }

@@ -4,28 +4,35 @@ using namespace std;
 
 class MyClass {
  private:
-  int *value;
+  int data;
+  int *ptr;
 
  public:
   MyClass();
   ~MyClass();
 };
 
-MyClass::MyClass() { value = new int(10); }
+MyClass::MyClass() {
+  ptr = new int(10);
+  data = 10;
+}
 
 MyClass::~MyClass() {
   cout << "destructor called" << endl;
-  delete value;
+  delete ptr;
+}
+
+void functionA() {
+  MyClass newClass1;  // 1 int on the heap
+  MyClass newClass2;  // 1 int on the heap
 }
 
 int main() {
   MyClass *newClass = new MyClass;
 
-  for (int i = 0; i < 100; i++) {
-    int *x = new int(100);
-  }
-
   delete newClass;
+
+  // functionA();
 
   return 0;
 }

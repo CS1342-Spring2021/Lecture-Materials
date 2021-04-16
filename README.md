@@ -16,6 +16,7 @@ You will find the following under the sample code directory.
 8. `Chapter09/` - Searching and Sorting Algorithms
 9. `Chapter10/` - Objects and Classes
 10. `Chapter11/` - Pointers
+11. `Chapter12/` - Linked Lists, Stacks, Queues
 
 ### Miscellaneous
 

@@ -31,6 +31,8 @@ int main() {
   MyClass classA;
   MyClass classB;
 
+  classA = classA;
+
   cout << "ClassA->value: " << *(classA.value) << endl;
   cout << "ClassB->value: " << *(classB.value) << endl << endl;
 

@@ -52,6 +52,8 @@ string Profile::getFirstName() { return firstName; }
 string Profile::getLastName() { return lastName; }
 
 void Profile::display() {
+  (*this).id;
+  this->id;
   cout << id << endl;
   cout << firstName << endl;
   cout << lastName << endl;
@@ -65,6 +67,8 @@ bool Profile::operator==(Profile profileToCompare) {
 int main() {
   Profile profile1(1, "Erik", "Gabrielsen");
   Profile profile2(2, "Liz", "Gabrielsen");
+
+  profile1.display();
 
   // profile1.operator==(profile2)
   if (profile1 == profile2) {
