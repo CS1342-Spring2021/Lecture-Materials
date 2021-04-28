@@ -44,7 +44,8 @@ int main() {
   PrivateInheritance c3;
 
   c1.publicData;
-  c2.publicData;
+  // c1.protectedData;  // Does not compile
+  // c2.publicData;     // Does not compile
   // c2.data;
   // c3.data;
 
