@@ -7,6 +7,8 @@ void functionA() {
   int y = 10;
 }
 
+void displayPtr(int *ptr) { cout << *ptr << endl; }
+
 int main() {
   functionA();
 
@@ -32,6 +34,18 @@ int main() {
   cout << value << endl;  // 10
 
   cout << &ptr << endl;  // 0x5432
+
+  int *ptr = new int;  // ?
+  int value = 10;      // 0x1234
+
+  *ptr = 10;
+
+  displayPtr(&value);
+
+  int *ptr2 = &value;
+
+  cout << ptr2;   // memory address - 0x1234
+  cout << &ptr2;  // memory address - 0x2345
 
   return 0;
 }

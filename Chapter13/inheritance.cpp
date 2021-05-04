@@ -50,10 +50,6 @@ class Employee : public Person {
   string companyName;
 };
 
-class SoftwareEngineer : public Employee {};
-
-class Manager : public Employee {};
-
 class Student : public Person {
  public:
   void setSchoolName(string name) { this->schoolName = name; }

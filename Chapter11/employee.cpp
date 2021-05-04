@@ -35,7 +35,8 @@ Employee::~Employee() {
 
 Employee::Employee(const Employee &copy) {
   std::cout << "Copy Constructor called" << std::endl;
-  id = new int(*copy.id);
+  id = new int(*copy.id);  // creating memory and storing a copy of the value
+  id = copy.id;            // memory
   name = copy.name;
 }
 
@@ -59,7 +60,7 @@ int main() {
   Employee e1;  // Calls Default Constructor
   e1.setId(1);  // Calls setter
 
-  print(e1);  // Passing by Reference -> calls the Copy Constructor
+  print(e1);  // Passing by Value -> calls the Copy Constructor
 
   Employee e2 = Employee(e1);  // Also calls the copy constructor
   Employee e3;                 // Default Constructor
